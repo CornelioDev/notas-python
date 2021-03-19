@@ -38,4 +38,25 @@ class Acciones:
             print("Lo siento, algo ha malido sal")
     
     def ProximasAcciones(self, usuario):
-        return None
+        
+        print("""
+        Acciones disponibles:
+            -Crear nota (crear)
+            -Mostrar tus notas (mostrar)
+            -Eliminar nota (eliminar)
+            -Salir (salir)
+        """)
+
+        accion = input("¿Qué quieres hacer? -> ")
+
+        if accion == "crear":
+            print("Vamos a crear")
+            self.ProximasAcciones(usuario)
+        elif accion == "mostrar":
+            print("Vamos a ver tus notas")
+            self.ProximasAcciones(usuario)
+        elif accion == "eliminar":
+            print("Vamos a eliminar una nota")
+            self.ProximasAcciones(usuario)
+        elif accion == "salir":
+            exit()
