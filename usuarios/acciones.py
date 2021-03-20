@@ -56,7 +56,7 @@ class Acciones:
             print("Vamos a crear")
             self.ProximasAcciones(usuario)
         elif accion == "mostrar":
-            print("Vamos a ver tus notas")
+            hazEl.mostrar(usuario)
             self.ProximasAcciones(usuario)
         elif accion == "eliminar":
             print("Vamos a eliminar una nota")
