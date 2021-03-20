@@ -1,4 +1,5 @@
 import usuarios.usuario as modelo
+import notas.acciones
 
 class Acciones:
 
@@ -17,8 +18,8 @@ class Acciones:
                 self.ProximasAcciones(login)
         
         except Exception as e:
-            print(type(e))
-            print(type(e).__name__)
+            # print(type(e))
+            # print(type(e).__name__)
             print(f"Login incorrecto")
         
     def registro(self):
@@ -48,8 +49,10 @@ class Acciones:
         """)
 
         accion = input("¿Qué quieres hacer? -> ")
+        hazEl = notas.acciones.Acciones()
 
         if accion == "crear":
+            hazEl.crear(usuario)
             print("Vamos a crear")
             self.ProximasAcciones(usuario)
         elif accion == "mostrar":
